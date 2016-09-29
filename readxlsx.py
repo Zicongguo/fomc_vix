@@ -38,8 +38,8 @@ if sheetname=="VXX":
     filtered1=[]
     tagged_art1=[]
     for i in product:
-        if i[0] in Date:
-            idx=Date.index(i[0])
+        if i[0] in dates:
+            idx=dates.index(i[0])
             entry=[i[0],float(i[3])]
             if entry[1]>0:
                 tagged_art1.append([arttrim[idx],'up',i[0]])
@@ -52,15 +52,15 @@ if sheetname=="VXX":
     for i in tagged_art1:
         temp.append(list(i[0:2]))
     tagged_art1=temp 
-    Date_sorted1=sorted(Date,key=lambda x: datetime.datetime.strptime(x, '%Y/%m/%d'))
+    Date_sorted1=sorted(dates,key=lambda x: datetime.datetime.strptime(x, '%Y/%m/%d'))
 
 else:
     filtered=[]
     jump=[]
     tagged_art=[]
     for i in product:
-        if i[0] in Date:
-            idx=Date.index(i[0])
+        if i[0] in dates:
+            idx=dates.index(i[0])
             entry=[i[0],float(i[3])]
             if entry[1]>0:
                 tagged_art.append([arttrim[idx],'up',i[0]])
@@ -74,7 +74,7 @@ else:
     for i in tagged_art:
         temp.append(list(i[0:2]))
     tagged_art=temp 
-    Date_sorted=sorted(Date,key=lambda x: datetime.datetime.strptime(x, '%Y/%m/%d'))
+    Date_sorted=sorted(dates,key=lambda x: datetime.datetime.strptime(x, '%Y/%m/%d'))
 
 
 
