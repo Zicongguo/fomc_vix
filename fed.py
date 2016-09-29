@@ -74,7 +74,6 @@ for row in range(len(articles)):
     print "\n\n\n"
 
 
-
 mode = 'ngram'
 arttrim = []
 
