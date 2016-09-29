@@ -9,7 +9,7 @@ import xlrd
 from numpy import *
 import operator
 import datetime
-path ='/Users/henry/Desktop/Spring 2016/Algo Trading/Final Project/code/VXX.xlsx'
+path ='VXX.xlsx'
 
 workbook = xlrd.open_workbook(path)
 sheetname='VIX'
